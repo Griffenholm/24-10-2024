@@ -1,0 +1,27 @@
+@startuml
+interface Shape{
+double getArea()
+void display()
+}
+
+class Square implements Shape{
+    double l
+    double getArea()
+    void display()
+}
+
+class Circle implements Shape{
+    double r
+    double getArea()
+    void display()
+}
+
+class ShapeBuilder{
+ArrayList<Shape> shapes
+void addShape(Shape s)
+double getTotalArea()
+}
+
+ShapeBuilder *-- Shape
+
+@enduml
